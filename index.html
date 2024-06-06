@@ -1,0 +1,104 @@
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/giaosu0719/icons/main/favicon.ico">
+        <link rel="stylesheet" href="srcs/css69.css">
+        <script src="srcs/ac.js"></script>
+        <title>VIP 🤑🤑🤑</title>   
+    </head>
+    
+    <header>
+        <div class = "center">
+            <h1>Trang web thong minh 🧠🧠🧠</h1>
+        </div>
+    </header>
+
+    <body>
+        <img src="srcs/1.gif" alt="deptrai"class="bg">
+        <hr>
+        <div class = "menu">
+            <div class = "center">
+                <button type="button", onclick="clicksss('tuoi')", class="btn btn-secondary", id = "btntuoi">May tinh tuoi thong minh</button>
+                <button type="button", onclick="clicksss('chieucao')", class="btn btn-secondary", id = "btnchieucao">May tinh chieu cao thong minh</button>
+                <button type="button", onclick="clicksss('tinh')", class="btn btn-secondary", id = "btntinh">May tinh thong minh</button>
+            </div>
+        </div>
+        <hr>
+        <div id = "tinh" style="display: none;">
+            <div class = "center">
+                <h5> May tinh thong minh 🐧 </h5>
+            </div>  
+            <div class = "center">
+                <label>Nhap a:</label>
+                <input type="text" id="a_input" placeholder="Nhap a tai day", class="form-control">
+            </div>
+            <div class = "center">
+                <br></br>
+                <label>Nhap b:</label>
+                <input type="text" id="b_input" placeholder="Nhap b tai day", class="form-control">
+            </div>
+            <div class = "center">
+                <br></br>
+                <div id = "show_ans_tinh" style="display: none;">
+                    <div class = "center">
+                        <a id = "ans_tinh">DEO BIET</a>
+                        <!-- return ket qua tai day -->
+                    </div>
+                </div>
+            </div>
+            <div class = "center">
+                <button type="button", onclick="calc('tinh')", class="btn btn-success">Tinh ket qua a + b</button>
+            </div>
+        </div>
+        <div id = "tuoi" style="display: none;">
+            <div class = "center">
+                <h5> May tinh tuoi thong minh 🐧 </h5>
+            </div>  
+            <div class = "center">
+                <label>Nhap tuoi:</label>
+                <input type="text" id="tuoi_input" placeholder="Nhap tuoi tai day", class="form-control">
+            </div>
+            <div class = "center">
+                <br></br>
+                <div id = "show_ans_tuoi" style="display: none;">
+                    <div class = "center">
+                        <a id = "ans_tuoi">DEO BIET</a>
+                        <!-- return ket qua tai day -->
+                    </div>
+                </div>
+            </div>
+            <div class = "center">
+                <button type="button", onclick="calc('tuoi')", class="btn btn-success">Tinh ket qua</button>
+            </div>
+        </div>
+        <div id = "chieucao" style="display: none;">
+            <div class = "center">
+                <h5> May tinh chieu cao thong minh 🐧 </h5>
+            </div>
+            <div class = "center">
+                <label>Nhap chieu cao (cm):</label>
+                <input type="text" id="chieucao_input" placeholder="Nhap chieu cao tai day", class="form-control">
+            </div>
+            <div class = "center">
+                <br></br>
+                <div id = "show_ans_chieucao" style="display: none;">
+                    <div class = "center">
+                        <a id = "ans_chieucao">DEO BIET</a>
+                        <!-- return ket qua tai day -->
+                    </div>
+                </div>
+            </div>
+            <div class = "center">
+                <button type="button", onclick="calc('chieucao')", class="btn btn-success">Tinh ket qua</button>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <div class = "footer">
+            <a> gs uwwu </a>
+        </div>
+    </footer>
+</html> 
