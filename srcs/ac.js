@@ -1,4 +1,4 @@
-var ShowF = "CAINIT";
+var ShowF = "CAINIT123";
 var count_tuoi = 1;
 var count_chieucao = 0;
 var last_tuoi = 0;
