@@ -1,10 +1,11 @@
 var ShowF = "CAINIT";
-var count_tuoi = 0;
+var count_tuoi = 1;
 var count_chieucao = 0;
 var last_tuoi = 0;
 var last_chieucao = 0;
 var check_tuoi = false;
 var check_chieucao = false;
+var ngungu69 = 0;
 
 function check_int(input){
     if(parseInt(input) != NaN && !isNaN(input)){
@@ -23,8 +24,7 @@ function check_space(input){
 
 function hide_ans(type){
     if(type == "chieucao") document.getElementById("show_ans_chieucao").style.display = "none";
-    else if(type == "tuoi")document.getElementById("show_ans_tuoi").style.display = "none";
-    else document.getElementById("show_ans_tinh").style.display = "none";
+    else document.getElementById("show_ans_tuoi").style.display = "none";
 }
 
 function clicksss(type){
@@ -32,37 +32,19 @@ function clicksss(type){
         var get = document.getElementById("tuoi");
         var get2 = document.getElementById("chieucao");
         document.getElementById("btnchieucao").className = "btn btn-secondary";
-        document.getElementById("btntinh").className = "btn btn-secondary";
         document.getElementById("btntuoi").className = "btn btn-primary";
         get2.style.display = "none";
-        var get3 = document.getElementById("tinh");
-        get3.style.display = "none";
         get.style.display = "block";
         ShowF = "TUOI";
     }
-    else if(type == 'chieucao'){
+    else{
         var get = document.getElementById("chieucao");
         var get2 = document.getElementById("tuoi");
         document.getElementById("btntuoi").className = "btn btn-secondary";
-        document.getElementById("btntinh").className = "btn btn-secondary";
         document.getElementById("btnchieucao").className = "btn btn-primary";
         get2.style.display = "none";
-        var get3 = document.getElementById("tinh");
-        get3.style.display = "none";
         get.style.display = "block";
         ShowF = "CHIEUCAO";
-    }
-    else{
-        var get = document.getElementById("tinh");
-        var get2 = document.getElementById("tuoi");
-        document.getElementById("btnchieucao").className = "btn btn-secondary";
-        document.getElementById("btntuoi").className = "btn btn-secondary";
-        document.getElementById("btntinh").className = "btn btn-primary";
-        get2.style.display = "none";
-        var get3 = document.getElementById("chieucao");
-        get3.style.display = "none";
-        get.style.display = "block";
-        ShowF = "TINH";
     }
 }
 
@@ -93,7 +75,15 @@ function calc(type){
             document.getElementById("show_ans_chieucao").style.display = "block";
         }
         else{
-            document.getElementById("ans_chieucao").textContent = "May bi ngu a lam j co thang nao co chieu cao la " + chieucao_tmp + " cm????";
+            if(ngungu69 < 5) document.getElementById("ans_chieucao").textContent = "May bi ngu a lam j co thang nao co chieu cao la " + chieucao_tmp + " cm????";
+            if(ngungu69 == 5) document.getElementById("ans_chieucao").textContent = "dung spam nua 😡";
+            if(ngungu69 == 6) document.getElementById("ans_chieucao").textContent = "may vao day chi de spam thoi dung khong";
+            if(ngungu69 == 7) document.getElementById("ans_chieucao").textContent = "may ngon may bam nua xem 😏"
+            if(ngungu69 >= 8) {
+                document.getElementById("ans_chieucao").textContent = "may gioi";
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+            ngungu69 += 1
             document.getElementById("show_ans_chieucao").style.display = "block";
         }
     }
@@ -111,14 +101,21 @@ function calc(type){
             }
             else{
                 if(tuoi_tmp == last_tuoi){
-                    count_tuoi = count_tuoi + 1;
                     document.getElementById("ans_tuoi").textContent = "Ban da an " + count_tuoi +" lan, tuoi cua ban van la: " + tuoi_tmp;
                 }
                 else{
                     check_tuoi = false;
-                    count_tuoi = 0;
+                    count_tuoi = 1;
                     document.getElementById("ans_tuoi").textContent = "Tuoi cua ban la: " + tuoi_tmp;
                 }
+                if(count_tuoi == 5) document.getElementById("ans_tuoi").textContent = "dung spam nua 😡";
+                if(count_tuoi == 6) document.getElementById("ans_tuoi").textContent = "may vao day chi de spam thoi dung khong";
+                if(count_tuoi == 7) document.getElementById("ans_tuoi").textContent = "may ngon may bam nua xem 😏";
+                if(count_tuoi >= 8){
+                    document.getElementById("ans_chieucao").textContent = "may gioi";
+                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                }
+                count_tuoi = count_tuoi + 1;
             }
             document.getElementById("show_ans_tuoi").style.display = "block";
         }
@@ -126,17 +123,5 @@ function calc(type){
             document.getElementById("ans_tuoi").textContent = "May bi ngu a lam j co thang nao co so tuoi la " + tuoi_tmp + " ????";
             document.getElementById("show_ans_tuoi").style.display = "block";
         }
-    }
-    else{
-        var a = document.getElementById("a_input").value;
-        var b = document.getElementById("b_input").value;
-        if(check_space(a) || check_space(b)){
-            hide_ans("tinh")
-            return
-        }
-        // var ans = "Hello World!"
-        var ans = a + b;
-        document.getElementById("ans_tinh").textContent = "Ket qua la: " + ans;
-        document.getElementById("show_ans_tinh").style.display = "block";
     }
 }
