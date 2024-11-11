@@ -112,7 +112,7 @@ function calc(type){
                 if(count_tuoi == 6) document.getElementById("ans_tuoi").textContent = "may vao day chi de spam thoi dung khong";
                 if(count_tuoi == 7) document.getElementById("ans_tuoi").textContent = "may ngon may bam nua xem 😏";
                 if(count_tuoi >= 8){
-                    document.getElementById("ans_chieucao").textContent = "may gioi";
+                    document.getElementById("ans_tuoi").textContent = "may gioi";
                     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
                 }
                 count_tuoi = count_tuoi + 1;
